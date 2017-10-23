@@ -1,3 +1,5 @@
+require("./main.css");
+
 const name = "Justin";
 
-setTimeout(() => alert(`Hello from ${name}`), 300);
+setTimeout(() => console.log(`Hello from ${name}`), 300);

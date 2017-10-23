@@ -4,15 +4,22 @@ module.exports = {
 		filename: "./bundle.js"
 	},
 	watch: true,
-	loaders: [
-		{
-			test: /.js$/,
-			loaders: "buble",
-		//include: path.join(__dirname, 'src'),
-			exclude: /node_modules/,
-			query: {
-				objectAssign: 'Object.assign'
+	module: {
+		loaders: [
+			{
+				test: /\.js$/,
+				exclude: /node_modules/,
+				loader: "babel-loader",
+				query: {
+					presets: ["es2015"]
+				}
+			},
+
+			{
+				test: /\.css$/,
+				exclude: /node_modules/,
+				loader: "css-loader"
 			}
-		}
-	]
+		]
+	}
 };
