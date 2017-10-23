@@ -9,9 +9,9 @@ module.exports = {
 			{
 				test: /\.js$/,
 				exclude: /node_modules/,
-				loader: "babel-loader",
+				loader: "buble-loader",
 				query: {
-					presets: ["es2015"]
+					objectAssign: "Object.assign"
 				}
 			},
 
